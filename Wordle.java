@@ -3,10 +3,21 @@ public class Wordle {
     // Reads all words from dictionary filename into a String array.
     public static String[] readDictionary(String filename) {
         In in = new In(filename);
-        String [] dict = in.readAllStrings() ;
-        return dict; 
+        String N = in.readString() ;
+        int count = 0;
+        while (!in.isEmpty());{
+            String x = in.readString();
+            count++;
+        }
+        String [] dict = new String[count];
 
-    }
+        for(int i =0; i<count ;i++){
+            dict[i] = in.readString();
+        }
+        return dict;
+        }
+
+    
 
     // Choose a random secret word from the dictionary. 
     // Hint: Pick a random index between 0 and dict.length (not including) using Math.random()
