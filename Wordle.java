@@ -4,7 +4,7 @@ public class Wordle {
     public static String[] readDictionary(String filename) {
         In in = new In(filename);
         String [] dict = in.readAllStrings() ;
-        return dict;
+        return dict; 
 
     }
 
@@ -107,8 +107,8 @@ public class Wordle {
         String secret = chooseSecretWord(dict);
 
         // Prepare 2D arrays for guesses and results
-        char[][] guesses = new char[6][5];
-        char[][] results = new char[6][5];
+        char[][] guesses = new char[MAX_ATTEMPTS][WORD_LENGTH];
+        char[][] results = new char[MAX_ATTEMPTS][WORD_LENGTH];
         // Prepare to read from the standart input 
         In inp = new In();
 
