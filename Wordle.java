@@ -135,9 +135,9 @@ public class Wordle {
             // Loop until you read a valid guess
             while (!valid) {
                 System.out.print("Enter your guess (5-letter word): ");
-                guess = args[attempt];
+                guess = inp.readString();
                 
-                if (guess.length() != 5 ) {
+                if (guess.length() != 5)  {
                     System.out.println("Invalid word. Please try again.");
                 } else {
                     valid = true;
@@ -155,6 +155,7 @@ public class Wordle {
             if (isAllGreen(results[attempt])) {
                 System.out.println("Congratulations! You guessed the word in " + (attempt + 1) + " attempts.");
                 won = true;
+                break;
             }
 
             attempt++;
